@@ -28,6 +28,7 @@ if ss -ltn "sport = :$PORT" | grep -q LISTEN && ! systemctl is-active --quiet se
 fi
 
 echo "==> User & folder"
+command -v rsync >/dev/null || apt-get install -y rsync
 id semut >/dev/null 2>&1 || useradd --system --home "$APP_DIR" --shell /usr/sbin/nologin semut
 mkdir -p "$APP_DIR" "$DATA_DIR"
 rsync -a --delete --exclude node_modules --exclude data --exclude .git "$SRC_DIR"/ "$APP_DIR"/
