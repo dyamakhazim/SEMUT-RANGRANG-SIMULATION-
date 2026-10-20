@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: semut-rangrang
+    runtime: node
+    plan: starter
+    buildCommand: npm ci --omit=dev
+    startCommand: node --no-warnings server/index.js
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_VERSION
+        value: 22.12.0
+      - key: DB_FILE
+        value: /var/data/semut.db
+      - key: ADMIN_CODE
+        generateValue: true
+    disk:
+      name: semut-data
+      mountPath: /var/data
+      sizeGB: 1

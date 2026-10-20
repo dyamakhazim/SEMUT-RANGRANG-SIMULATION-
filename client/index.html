@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Semut Rangrang: Office Life</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/client/style.css">
+</head>
+<body>
+<div id="app">
+  <section id="title" class="scene bg-title">
+    <div class="logo">
+      <span class="logo-1">Semut</span>
+      <span class="logo-2">Rangrang</span>
+      <span class="logo-sub">OFFICE LIFE</span>
+    </div>
+    <form id="joinForm" class="panel join-panel" autocomplete="off">
+      <span class="tag tag-green">Main Bareng</span>
+      <label>Nama panggilan<input id="fName" maxlength="24" required placeholder="Contoh: Aruni"></label>
+      <div class="row2">
+        <label>Kode pemain<input id="fCode" maxlength="20" required placeholder="ARUNI-7"></label>
+        <label>Kode tim<input id="fTeam" maxlength="20" value="SEMUT"></label>
+      </div>
+      <div class="field-label">Warna semut</div>
+      <div id="colorPick" class="color-pick"></div>
+      <label>Kode room dari temanmu<input id="fRoom" maxlength="8" placeholder="ABCD" class="room-input"></label>
+      <div class="join-actions">
+        <button type="submit" class="btn btn-orange" data-join="join"><span class="key">A</span>Gabung room</button>
+        <button type="button" class="btn btn-white" data-join="create">Bikin room baru</button>
+      </div>
+      <p class="fine">Progres kamu disimpan pakai kode pemain. Tanpa login.</p>
+      <p id="joinError" class="error"></p>
+    </form>
+  </section>
+
+  <section id="lobby" class="scene bg-title hidden"></section>
+
+  <section id="office" class="scene hidden">
+    <canvas id="canvas"></canvas>
+    <div id="hud"></div>
+    <div id="prompt" class="prompt hidden"></div>
+    <div id="eventBox"></div>
+  </section>
+
+  <section id="meeting" class="scene bg-meeting hidden"></section>
+  <section id="report" class="scene bg-report hidden"></section>
+
+  <div id="chat" class="chat panel hidden">
+    <div class="chat-tabs">
+      <button data-chat="near" class="on">Dekat</button>
+      <button data-chat="wa">Grup WA</button>
+      <button class="chat-min" data-chatmin aria-label="Kecilkan chat">–</button>
+    </div>
+    <div id="chatLog" class="chat-log"></div>
+    <form id="chatForm" autocomplete="off"><input id="chatInput" maxlength="200" placeholder="Enter untuk chat…" aria-label="Pesan chat"></form>
+  </div>
+  <div id="modal" class="modal hidden"></div>
+  <div id="toasts" class="toasts"></div>
+</div>
+<script type="module" src="/client/main.js"></script>
+</body>
+</html>

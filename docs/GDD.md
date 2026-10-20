@@ -264,7 +264,23 @@ Gambar di mockup adalah concept art (target tampilan). Aset game final dibuat ul
 - Nama karakter di game diisi sendiri oleh pemain. Nama brand memakai segmen, bukan nama klien asli.
 - Event dan dialog terinspirasi dari pola kerja nyata, tetapi ditulis ulang tanpa nomor telepon, nama klien, atau tautan internal.
 
-## 14. Pertanyaan terbuka
+## 14. Status implementasi (v1)
+
+Sudah bisa dimainkan (lihat README). Yang sudah jalan:
+
+- Title, lobby dengan kode room dan link undangan, pilih divisi, mode Quick Run atau 1 bulan, tiga kecepatan
+- Brainstorm Senin: data brand, vote hook (Gerbang 1), aturan brand (Gerbang 2), rencana minggu W1/W2/W3
+- Kantor real-time: jalan-jalan, meja per divisi, oper tugas (jalan kaki atau lempar via grup WA), combo Rantai Rangrang, Feromon, stress dan pantry, event klien, chat dekat dan grup WA
+- AI Assistant dengan cacat tersembunyi, review 4 cek di Gerbang 3, revisi, Gerbang 4 hari Jumat
+- Weekly Update, Evaluasi → Report dengan insight "what & why", skor koloni
+- Event log, 6 skill, label karakter, dashboard BOD
+
+Penyesuaian dari rancangan:
+- Struktur divisi mengikuti BOD, Project Management, Distribution, Creative. Vendor dan Freelancer jadi NPC yang mengerjakan langkah divisi kosong (lebih lambat dan lebih sering meloloskan cacat).
+- AI di dalam game masih disimulasikan dari tabel (fase 1). Belum memanggil API AI sungguhan.
+- Penyimpanan memakai SQLite bawaan Node, bukan PostgreSQL, supaya cukup satu server.
+
+## 15. Pertanyaan terbuka
 - Siapa saja yang memegang kode admin dashboard BOD?
 - Berapa lama data event disimpan?
 - Durasi sesi yang paling realistis untuk tim: Quick Run 25 menit atau run penuh 1,5–2 jam?

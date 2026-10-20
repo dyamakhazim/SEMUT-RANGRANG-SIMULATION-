@@ -1,0 +1,29 @@
+{
+  "name": "semut-rangrang-office-life",
+  "version": "1.0.0",
+  "description": "Game simulasi kantor agency multiplayer",
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "scripts": {
+    "start": "node --no-warnings server/index.js",
+    "test": "node --no-warnings test/sim.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dyamakhazim/SEMUT-RANGRANG-SIMULATION-.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dyamakhazim/SEMUT-RANGRANG-SIMULATION-/issues"
+  },
+  "homepage": "https://github.com/dyamakhazim/SEMUT-RANGRANG-SIMULATION-#readme",
+  "dependencies": {
+    "ws": "^8.18.0"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=22.5"
+  }
+}

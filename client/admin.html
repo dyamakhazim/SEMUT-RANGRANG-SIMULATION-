@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dashboard BOD · Semut Rangrang</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/client/style.css">
+<style>
+  html, body { overflow: auto; background: #F3E7CF; }
+  .wrap { max-width: 1240px; margin: 0 auto; padding: 24px 16px 60px; display: flex; flex-direction: column; gap: 18px; }
+  .head { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+  .head h1 { font-size: 34px; }
+  .head select { width: auto; }
+  body { height: auto; }
+  .login { max-width: 420px; padding: 30px 22px 20px; display: flex; flex-direction: column; gap: 12px; }
+  .players { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 14px; }
+  .pcard { padding: 16px; border-radius: 24px; display: flex; flex-direction: column; gap: 8px; }
+  .pcard .top { display: flex; align-items: center; gap: 10px; }
+  .labels { display: flex; flex-wrap: wrap; gap: 6px; }
+  .labels .chip { background: #FFE3B8; }
+  .skill { display: grid; grid-template-columns: 120px 1fr 34px; gap: 8px; align-items: center; font-size: 13px; font-weight: 800; }
+  .rolegrid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+  .rolecard { padding: 14px; border-radius: 24px; display: flex; flex-direction: column; align-items: center; gap: 4px; }
+  .spark { display: block; }
+  .gap { background: #FFF1DD; border-radius: 14px; padding: 8px 12px; font-weight: 800; font-size: 14px; }
+  @media (max-width: 900px) { .rolegrid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+</style>
+</head>
+<body>
+<div class="wrap" id="root"></div>
+<script type="module" src="/client/admin.js"></script>
+</body>
+</html>
