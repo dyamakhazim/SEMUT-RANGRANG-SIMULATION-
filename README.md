@@ -46,6 +46,20 @@ npm test           # simulasi 1 bulan penuh dengan 4 bot
 
 Untuk main bareng dalam satu WiFi kantor, jalankan `npm start` di satu laptop, lalu yang lain buka `http://<IP-laptop-itu>:8080`.
 
+### VPS sendiri (Ubuntu + nginx)
+
+Di VPS, dari folder repo hasil clone:
+
+```bash
+sudo bash deploy/setup.sh sarang.semut.cloud email@kamu.com
+```
+
+Skrip ini memasang Node.js 22, menjalankan game sebagai service systemd di port 3100 (ubah dengan `PORT=xxxx sudo -E bash ...`), membuat konfigurasi nginx (termasuk WebSocket), dan memasang sertifikat HTTPS Let's Encrypt. Kode admin dibuat acak dan disimpan di `/etc/semut-rangrang.env`. Database ada di `/var/lib/semut-rangrang/`.
+
+Untuk update: `git pull` lalu jalankan skrip yang sama lagi. Kode admin dan database tetap.
+
+Log: `journalctl -u semut-rangrang -f`
+
 ### Online
 
 Game ini satu server Node (WebSocket + SQLite), jadi butuh hosting yang menjalankan proses Node terus-menerus, bukan hosting statis.
